@@ -7,7 +7,7 @@ import java.util.List;
 public interface TicketService {
     TicketDTO createTicket();
 
-    TicketDTO getCurrentTicketByNumber(int number);
+    TicketDTO getCurrentTicketByNumber(Long number);
 
     void deleteLastTicket();
 

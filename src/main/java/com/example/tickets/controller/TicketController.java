@@ -22,7 +22,7 @@ public class TicketController {
     }
 
     @GetMapping("/{number}")
-    public ResponseEntity<TicketDTO> getCurrentTicket(@PathVariable int number) {
+    public ResponseEntity<TicketDTO> getCurrentTicket(@PathVariable Long number) {
         TicketDTO ticketDTO = ticketService.getCurrentTicketByNumber(number);
         return ResponseEntity.ok(ticketDTO);
     }

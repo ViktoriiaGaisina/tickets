@@ -18,7 +18,7 @@ public class Ticket {
     private Long number;
 
     @Column(name = "date", nullable = false)
-    private LocalDateTime localDateTime;
+    private LocalDateTime localDateTime = LocalDateTime.now();
 
     @Column(name = "number_wait", nullable = false)
     private int numberWait;

@@ -28,7 +28,7 @@ public class TicketServiceImpl implements TicketService {
     }
 
     @Override
-    public TicketDTO getCurrentTicketByNumber(int number) {
+    public TicketDTO getCurrentTicketByNumber(Long number) {
         Ticket ticket = ticketRepository.findByNumber(number)
                 .orElseThrow(() -> new EntityNotFoundException());
         return ticketMapper.toDto(ticket);

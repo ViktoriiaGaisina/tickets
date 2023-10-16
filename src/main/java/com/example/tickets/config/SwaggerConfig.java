@@ -27,9 +27,9 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("JavascriptFramework REST API")
+                .title("Tickets REST API")
                 .version("1.0")
-                .description("Documentation for JavascriptFramework project")
+                .description("Documentation for Tickets project")
                 .build();
     }
 }
