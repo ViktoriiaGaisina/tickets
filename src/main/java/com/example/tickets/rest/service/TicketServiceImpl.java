@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,6 +24,8 @@ public class TicketServiceImpl implements TicketService {
     @Override
     public TicketDTO createTicket() {
         Ticket ticket = new Ticket();
+        ticket.setLocalDateTime(LocalDateTime.now());
+        ticket.setNumberWait(1);
         ticket = ticketRepository.save(ticket);
         return ticketMapper.toDto(ticket);
     }

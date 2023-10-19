@@ -37,8 +37,9 @@ class TicketServiceTest {
     @Test
     void testCreateTicket() {
         TicketDTO ticketDTO = createDTO();
-        Ticket ticket = ticketRepository.save(ticketMapper.toEntity(ticketDTO));
-        Assertions.assertNotNull(ticket);
+        Ticket ticket1 = ticketRepository.save(ticketMapper.toEntity(ticketDTO));
+        TicketDTO ticket2= ticketService.createTicket();
+        Assertions.assertEquals(ticket1.getNumberWait(), ticket2.getNumberWait());
     }
 
     @Test
